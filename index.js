@@ -35,7 +35,6 @@ function initClient(){
         window.gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
         updateSigninStatus(window.gapi.auth2.getAuthInstance().isSignedIn.get());
         link.onclick = handleAuthClick;
-        getPlaylists();
     });
 }
 
@@ -46,6 +45,7 @@ function updateSigninStatus(isSignedIn){
     if(isSignedIn){
         link.textContent = "YouTube Account Already Linked";
         link.disabled = true;
+        getPlaylists();
     }
     else{
         link.textContent = "Link YouTube Account";
