@@ -44,9 +44,11 @@ function test(){
 function updateSigninStatus(isSignedIn){
     if(isSignedIn){
         link.textContent = "YouTube Account Already Linked";
+        link.disabled = true;
     }
     else{
         link.textContent = "Link YouTube Account";
+        link.disabled = false;
     }
 }
 
