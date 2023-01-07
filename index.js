@@ -1,6 +1,6 @@
 const CLIENT_ID = "00448fd615854e9bb62fa8c99f25d34c";
 const CLIENT_SECRET = "4f96d0a0236c466c8ec608daf936c518";
-const REDIRECT_URI = "http://127.0.0.1:5500/callback.html";
+const REDIRECT_URI = "https://chaotic-braindead.github.io/SpotifyAPI/callback.html";
 const SCOPES = [
     'user-read-currently-playing',
     'playlist-read-collaborative',
@@ -273,7 +273,7 @@ function logout(){
     localStorage.setItem('access_token', "undefined");
     localStorage.setItem('expiration', NaN);
     localStorage.setItem('code', null);
-    window.location.href = 'http://127.0.0.1:5500/index.html';
+    window.location.href = 'https://chaotic-braindead.github.io/SpotifyAPI/index.html';
 }
 
 let spoti = new Spotify();
