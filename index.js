@@ -86,6 +86,7 @@ class Spotify{
             return null;
         }
         const data = await res.json();
+        console.log(data);
         return data;
     }
     async auth(code){
@@ -98,6 +99,7 @@ class Spotify{
                 body: `grant_type=authorization_code&code=${code}&redirect_uri=${REDIRECT_URI}`
             });
         const data = await res.json();
+        console.log(data);
         let date = new Date()
         let now = date.getTime();
         localStorage.setItem('expiration', now + (data.expires_in * 1000));
