@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body onload="dashboard()">
+    <nav>
+        <label class="logo"><a href="index.html">SpotiFind</a></label>
+        <ul>
+            <li><a id="home" href="index.html">Home</a></li>
+            <li><a id="dashboard" href="dash.html"></a></li>
+            <li><a id="login-button" onclick="login()">Login</a></li>
+            <li><a id="logout-button" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="img-container"></div>
+        <h2 id="user"></h2>
+        <h3 id="current"></h3>
+        <a id="view-playlists" href="playlists.html">My Playlists</a>
+        <a id="top-songs" href="tracks.html">My Top Tracks</a>
+        <a id="top-artists" href="artists.html">My Top Artists</a>
+        <button id="link">Link YouTube Account</button>
+        
+</body>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="index.js"></script>
+<script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+
+</html>

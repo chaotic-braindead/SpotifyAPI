@@ -1,0 +1,205 @@
+* { 
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+img {
+    border-radius: 50%;
+    margin-bottom: 1em;
+    width: 10%;
+}
+body {
+    background-color: #121212;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+p {
+    text-align: center;
+}
+h2 {
+    color: white;
+}
+nav {
+    background-color: #14833b;
+    width: 100%;
+    height: 100px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;    
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 5px;
+    line-height: 95px;
+}
+
+nav ul li a {
+    font-size: 18px;
+    padding: 7px 20px;
+    cursor: pointer;
+    background-color: #14833b;
+    transition: color 0.5s;
+}
+
+nav ul li a:hover {
+    color: #121212;  
+    text-decoration: underline;
+}
+label.logo a{
+    color: white;
+    line-height: 100px;
+    padding: 0 40px;
+    font-size: 30px; 
+}
+
+.login {
+    background-color: #121212;
+    border-radius: 20px;
+    border-color: #999999;
+    border-style: solid;
+    border-width:1px;
+    text-align: center;
+    margin-top: 10em;
+    margin-left:30em;
+    margin-right:30em;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+#text {
+    background-color: white;
+    height: 2em;
+    width: 30em;
+    font-size: 1em;
+}
+
+#submit, #back, #view-playlists, #top-songs, #top-artists, #link{
+    height: 3em;
+    width: 20em;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #14833b;
+    color:white;
+    border: none;
+    font-weight: bold;
+    margin-left: 38.4%;
+    margin-top:0.5em;
+    margin-bottom:0.5em;
+    transition: 0.5s;
+
+}
+#open {
+    transition: 0.5s;
+}
+#open:hover {
+    color:#14833b
+}
+
+#back{
+    margin-left:2em;
+    margin-bottom:1.5em;
+    background-color: #121212;
+    width:10em;
+    border-width: 1px;
+    border: solid #999999;
+    border-radius:30px;
+}
+
+#back:hover{
+    color:#14833b;
+    border-color:#14833b;
+}
+#view-playlists, #top-songs, #top-artists, #back, #link{
+    text-align: center;
+    line-height: 3em;
+}
+#submit:hover, #view-playlists:hover, #top-songs:hover, #top-artists:hover, #link:hover{
+    opacity: 0.7;
+}
+
+#confirmation {
+    color:white;
+    margin-top: 22%;
+    margin-left: 28%;
+    margin-right: 25%;
+}
+
+#confirmation a {
+    color:#14833b;
+}
+
+#user {
+    margin-top: 1em;
+    /* margin-bottom: 2em; */
+}
+#current {
+    margin-bottom: 2em; 
+    color: white;
+}
+.container {
+    margin-top: 9%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top:3em;
+    display:grid;
+    text-align: center;
+    border: solid #999999;
+    border-radius: 20px;
+    padding-bottom: 3em;
+    transition: 1s;
+}
+
+table {
+    display:none;
+    color:white;
+    text-align: center;
+    border: 1px solid;
+    color: white;
+}
+table td {
+    padding: 1em 1em;
+}
+
+select {
+    color: black;
+    width:25em;
+    height: 2em;
+    text-align: center;
+    outline:none;
+    border-radius: 5px;
+    margin:auto;
+    margin-bottom:1em;
+}
+
+div {
+    border-width: 1px;
+    border-color: #999999;
+}
+
+#album {
+    border-radius: 0;
+}
+
+#song-container{
+    text-align: left;
+    margin-left:2em;
+    margin-right:2em;
+}
+#song-container:hover{
+    background-color: #202020;
+}
+#span {
+    padding-top: 2em;
+    padding-left: 1em;
+}
