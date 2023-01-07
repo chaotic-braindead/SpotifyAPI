@@ -35,6 +35,7 @@ function initClient(){
         window.gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
         updateSigninStatus(window.gapi.auth2.getAuthInstance().isSignedIn.get());
         link.onclick = handleAuthClick;
+        getPlaylists();
     });
 }
 
@@ -60,9 +61,10 @@ function handleSignoutClick(){
     window.gapi.auth2.getAuthInstance().signOut();
 }
 
-function getPlaylists(channel){
+function getPlaylists(){
     window.gapi.client.youtube.playlists.list({
-        part : 'snippet,contentDetails,id'
+        "part" : 'snippet,contentDetails,id',
+        "mine" : true
     })
     .then(response => {console.log(response);})
     .catch(err => alert("No playlists"));
