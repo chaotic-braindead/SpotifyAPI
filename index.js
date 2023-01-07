@@ -194,7 +194,12 @@ async function submit(){
     let submit = document.getElementById('submit');
     let back = document.getElementById('back');
     let container = document.querySelector('.container');
+    let user = document.getElementById('user');
     const songs = await spoti.get(access_token, select.value);
+    const start = songs.href.indexOf('playlists') + 10;
+    const end = start + 22;
+    const title = await spoti.get(access_token, 'playlists/'+ songs.href.substring(start, end))
+    user.textContent = title.name;
     select.style.display = 'none';
     submit.style.display = 'none';
     for(let i = 0; i < songs.items.length; i++){
