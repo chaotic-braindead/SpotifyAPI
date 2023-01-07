@@ -97,7 +97,11 @@ label.logo a{
     margin-top:0.5em;
     margin-bottom:0.5em;
     transition: 0.5s;
+    margin:auto;
+}
 
+#view-playlists, #top-songs, #top-artists, #link{
+    margin-bottom:1em;
 }
 #open {
     transition: 0.5s;
@@ -141,7 +145,6 @@ label.logo a{
 
 #user {
     margin-top: 1em;
-    /* margin-bottom: 2em; */
 }
 #current {
     margin-bottom: 2em; 
@@ -202,4 +205,86 @@ div {
 #span {
     padding-top: 2em;
     padding-left: 1em;
+}
+
+@media only screen and (max-width:700px){
+
+    nav {
+        width: 100%;
+        height: 70px;
+    }
+    nav ul {
+        float: right;
+        margin-right: 10px;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 2px;
+        line-height: 4.5em;
+    }
+
+    nav ul li a {
+        font-size: 0.75em;
+        padding: 5px 5px;
+    }
+    label.logo a{
+        line-height: 3.1em;
+        padding: 0 1em;
+        font-size: 1.5em; 
+    }
+
+    .container {
+        margin-top: 7em;
+        margin-left: 1em;
+        margin-right: 1em;
+        padding-top:3em;
+        
+    }
+    #submit, #back, #view-playlists, #top-songs, #top-artists, #link{
+        height: 3em;
+        width: 13em;
+        font-size: 1em;
+        font-weight: bold;
+        margin:auto;
+    }
+    #user {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+    }
+    img {
+        width: 8em;
+    }
+    select {
+        width:15em;
+        height: 2em;
+        border-radius: 5px;
+        margin:auto;
+        margin-bottom:1em;
+    }
+    #back{
+        margin-left:2em;
+        margin-right:0;
+        width:5em;
+        font-size: 0.8em;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    h3 {
+        font-size:13px;
+        margin-top:3px;   
+    }
+    h4 {
+        margin-top:3px;
+        font-size:10px;
+    }
+    #span {
+        padding-top: 1.35em;
+        padding-left: 1em;
+    }
+    #view-playlists, #top-songs, #top-artists, #link{
+        margin-bottom:1em;
+    }
+
 }
