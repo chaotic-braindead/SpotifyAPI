@@ -60,13 +60,12 @@ function handleSignoutClick(){
     window.gapi.auth2.getAuthInstance().signOut();
 }
 
-function getChannel(channel){
-    window.gapi.client.youtube.channels.list({
-        part : 'snippet,contentDetails,statistics',
-        forUsername: channel
+function getPlaylists(channel){
+    window.gapi.client.youtube.playlists.list({
+        part : 'snippet,contentDetails,id'
     })
     .then(response => {console.log(response);})
-    .catch(err => alert("No channel"));
+    .catch(err => alert("No playlists"));
 }
 
 class Spotify{
