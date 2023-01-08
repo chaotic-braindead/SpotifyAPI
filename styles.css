@@ -286,5 +286,11 @@ div {
     #view-playlists, #top-songs, #top-artists, #link{
         margin-bottom:1em;
     }
-
+     .login{
+        margin-top: 8em;
+        margin-left:1em;
+        margin-right:1em;
+        padding-top: 5em;
+        padding-bottom: 5em;
+    }
 }
