@@ -109,16 +109,19 @@ class Spotify{
     }
 };
 
-function onLoad(){
-    home();
+async function onLoad(){
     const url = new URLSearchParams(window.location.search);
     const code = url.get('code');
     localStorage.setItem('code', code);
-    spoti.auth(code);
+    await spoti.auth(code);
+    home();
 }
 
-async function home(){
+async function home(arg=false){
     let access_token = localStorage.getItem('access_token');
+    if(arg)
+        access_token = "0";
+    
     let expiration = +localStorage.getItem('expiration');
     
     let dash = document.getElementById('dashboard');
@@ -128,13 +131,14 @@ async function home(){
     let date = new Date();
     let now = date.getTime();
 
-    if (access_token !== "undefined"){    
+    if (access_token !== "0"){    
         const data = await spoti.get(access_token, 'me');
          if(data.status === 200);
             dash.textContent = data.display_name;
         loginBtn.style.display = 'none';
     }
     else{
+        localStorage.setItem('access_token', "0");
         logoutBtn.style.display = 'none';
         dash.style.display = 'none';
     }
@@ -280,9 +284,9 @@ async function showTopTracks(){
 }
 function logout(){
     home();
-    localStorage.setItem('access_token', "undefined");
+    localStorage.setItem('access_token', "0");
     localStorage.setItem('expiration', NaN);
-    localStorage.setItem('code', null);
+    localStorage.setItem('code', "0");
     window.location.href = 'https://chaotic-braindead.github.io/SpotifyAPI/index.html';
 }
 
