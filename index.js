@@ -85,7 +85,7 @@ class Spotify{
             return null;
         }
         const data = await res.json();
-        alert(data);
+        alert(JSON.stringify(data));
         return data;
     }
     async auth(code){
