@@ -38,9 +38,6 @@ function initClient(){
     });
 }
 
-function test(){
-    console.log("here");
-}
 function updateSigninStatus(isSignedIn){
     if(isSignedIn){
         link.textContent = "YouTube Account Already Linked";
@@ -88,7 +85,7 @@ class Spotify{
             return null;
         }
         const data = await res.json();
-        console.log(data);
+        alert(data);
         return data;
     }
     async auth(code){
@@ -127,12 +124,12 @@ async function home(arg=false){
     let dash = document.getElementById('dashboard');
     let loginBtn = document.getElementById('login-button');
     let logoutBtn = document.getElementById('logout-button');
-
     let date = new Date();
     let now = date.getTime();
 
     if (access_token !== "0"){    
         const data = await spoti.get(access_token, 'me');
+        alert(data.status);
          if(data.status === 200);
             dash.textContent = data.display_name;
         loginBtn.style.display = 'none';
