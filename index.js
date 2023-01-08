@@ -44,12 +44,11 @@ function test(){
 function updateSigninStatus(isSignedIn){
     if(isSignedIn){
         link.textContent = "YouTube Account Already Linked";
-        link.setAttribute('disabled', true);
-        getPlaylists();
+        link.disabled = true;
     }
     else{
         link.textContent = "Link YouTube Account";
-        link.removeAttribute('disabled');
+        link.disabled = false;
     }
 }
 
@@ -103,7 +102,7 @@ class Spotify{
             });
         const data = await res.json();
         console.log(data);
-        let date = new Date()
+        let date = new Date();
         let now = date.getTime();
         localStorage.setItem('expiration', now + (data.expires_in * 1000));
         localStorage.setItem('access_token', data.access_token);
