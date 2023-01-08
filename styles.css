@@ -244,7 +244,7 @@ div {
     #submit, #back, #view-playlists, #top-songs, #top-artists, #link{
         height: 3em;
         width: 13em;
-        font-size: 1em;
+        font-size: 0.85em;
         font-weight: bold;
         margin:auto;
     }
