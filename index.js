@@ -130,7 +130,8 @@ async function home(){
 
     if (access_token !== "undefined"){    
         const data = await spoti.get(access_token, 'me');
-        dash.textContent = data.display_name;
+         if(data.status === 200);
+            dash.textContent = data.display_name;
         loginBtn.style.display = 'none';
     }
     else{
